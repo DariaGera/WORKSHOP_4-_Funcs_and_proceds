@@ -5,12 +5,12 @@ CREATE TYPE actual_caller_info_row AS OBJECT (
     call_begin    TIMESTAMP,
     title         VARCHAR2(128)
 );
-
+/
 
 --2 step to create(and run after 1 step!) a table as a class, it inherits the class row
 CREATE TYPE actual_caller_info_table IS
     TABLE OF actual_caller_info_row;
-
+/
 
 --3 step to create function only!! after running steps 1 and 2 
 CREATE FUNCTION actual_caller_info (
