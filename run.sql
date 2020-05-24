@@ -1,7 +1,8 @@
---set serveroutput on;
---begin
---    dbms_output.enable;
---end;
+set serveroutput on;
+begin
+    dbms_output.enable;
+end;
+/
 
 DECLARE 
 CURSOR curs_for_procedure IS 
@@ -122,9 +123,5 @@ BEGIN
         LOOP
             dbms_output.put_line('OPERATOR_NAME: '||cur_row.operator_911||'     WITNESS_NAME: '||cur_row.witness||'     CALL_BEGIN: '||cur_row.call_begin||'     TITLE: '||cur_row.title);
         END LOOP;
-
-
-
-
 
 END;
